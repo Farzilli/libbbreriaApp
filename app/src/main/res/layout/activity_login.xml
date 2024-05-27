@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f45f0b"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Libbbreria"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/userButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:text="User"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:text="Cart"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginBottom="192dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/errMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#fc0303"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Email"
+            android:text="francesco.arzilli@iticopernico.it"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:text="abc"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/background"
+            android:text="Submit"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background"
+        android:padding="5dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/libriButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Libri" />
+
+        <Button
+            android:id="@+id/cdButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Cd" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Search" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

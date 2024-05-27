@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f45f0b"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:text="Libbbreria" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/userButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:text="User"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:text="Cart"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/topbar">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="User: None"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            android:textColor="@color/white"
+            android:text="Logout"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background"
+        android:padding="5dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/libriButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Libri" />
+
+        <Button
+            android:id="@+id/cdButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Cd" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/background"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            android:text="Search" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
